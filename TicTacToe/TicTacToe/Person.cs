@@ -4,31 +4,14 @@ using System.Text;
 
 namespace TicTacToe
 {
-    public class Person
+    public class Player
     {
-
-        private string Name //
-        //this is the set up for a person 
-
-        //access modifier, return type, calling the property name {getter , setter(changes) }
+        public Player(string name, string mark)
+        {
+            Name = name;
+            Mark = mark;
+        }
         public string Name { get; set; }
-
-
-
-        public String SayHi()
-        {
-            return "hello";
-        }
-
-        public String Goodbye()
-        {
-            return "GoodBye";
-        }
-
-        public String Dance()
-        {
-            return "yes";
-        }
-
+        public string Mark { get; set; }
     }
 }
