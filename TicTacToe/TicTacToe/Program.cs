@@ -25,7 +25,7 @@ namespace TicTacToe
         }
 
        //Input Players
-        static Player CreatePlayer1(string name, string marker)
+        public static Player CreatePlayer1(string name, string marker)
         {
             Player player1 = new Player(name, marker);
             return player1;
@@ -112,7 +112,7 @@ namespace TicTacToe
         }
 
     
-        static bool CheckIfSpaceOpen(string selection, string[,] board)
+        public static bool CheckIfSpaceOpen(string selection, string[,] board)
         {
             bool check = false;
             // arrays to pass current row values into
@@ -159,7 +159,7 @@ namespace TicTacToe
         }
 
     
-        static string[,] UpdateBoard(string selection, string[,] board, Player player)
+        public static string[,] UpdateBoard(string selection, string[,] board, Player player)
         {
             Console.Clear();
 
