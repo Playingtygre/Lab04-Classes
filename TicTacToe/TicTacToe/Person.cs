@@ -6,8 +6,7 @@ namespace TicTacToe
 {
     public class Person
     {
-
-        private string Name //
+        
         //this is the set up for a person 
 
         //access modifier, return type, calling the property name {getter , setter(changes) }
@@ -18,6 +17,11 @@ namespace TicTacToe
         public String SayHi()
         {
             return "hello";
+        }
+
+        public string EnterX()
+        {
+            return "yese";
         }
 
         public String Goodbye()

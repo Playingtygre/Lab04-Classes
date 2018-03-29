@@ -11,34 +11,28 @@ namespace TicTacToe
         static void Main(string[] args)
         {
             
-            
-
-            Console.WriteLine("Hello World!");
-
-            //Type name = new type
-            // tiger is a new object of the person class   
-            Person tiger = new Person();
+            Console.WriteLine("Hello World, Lets Play TicTacToe");
+            EnterPlayers();
 
 
-            Person jeannie = new Person();
-            jeannie.SayHi();
-
-            tiger.Dance();
-
-            tiger.Name = "Hsu"; // set grabing the value of the name
-            string name = tiger.Name; //grabing the value of the name
-
-            Console.WriteLine(name);
 
 
-            Console.WriteLine("Tiger " + tiger.SayHi());
-            Console.WriteLine("Jeannie" + jeannie.SayHi());
-            Console.WriteLine(tiger.Goodbye());
-            Console.ReadLine();
-
+           
 
 
         }
+
+        // enters players names
+        static void EnterPlayers()
+        {
+            Console.WriteLine("Lets Play TicTacToe: what is your name?");
+            string PlayerOne = (Console.ReadLine());
+            Console.WriteLine(PlayerOne + " " +"Greeting you will be X");
+
+            Console.WriteLine("what is your name of player 2");
+            string PlayerTwo = (Console.ReadLine());
+            Console.WriteLine(PlayerTwo + " " + "Greeting you will be 0");
+        } 
 
         
 
