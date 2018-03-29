@@ -32,9 +32,17 @@ namespace TicTacToe
             Console.WriteLine("what is your name of player 2");
             string PlayerTwo = (Console.ReadLine());
             Console.WriteLine(PlayerTwo + " " + "Greeting you will be 0");
-        } 
+        }
 
-        
+
+
+        static Player CreatePlayer1(string name, string marker)
+        {
+            Player player1 = new Player(name, marker);
+            return player1;
+        }
+
+
 
 
 

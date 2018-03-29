@@ -6,33 +6,23 @@ namespace TicTacToe
 {
     public class Person
     {
-        
-        //this is the set up for a person 
 
-        //access modifier, return type, calling the property name {getter , setter(changes) }
-        public string Name { get; set; }
-
-
-
-        public String SayHi()
+        public class Player
         {
-            return "hello";
+            public Player(string name, string mark)
+            {
+                Name = name;
+                Mark = mark;
+            }
+
+
+            //remember these are the get & set methods for creating a class
+            public string Name { get; set; }
+            public string Mark { get; set; }
+
+
         }
 
-        public string EnterX()
-        {
-            return "yese";
-        }
-
-        public String Goodbye()
-        {
-            return "GoodBye";
-        }
-
-        public String Dance()
-        {
-            return "yes";
-        }
 
     }
 }
