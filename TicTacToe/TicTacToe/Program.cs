@@ -115,6 +115,7 @@ namespace TicTacToe
         public static bool CheckIfSpaceOpen(string selection, string[,] board)
         {
             bool check = false;
+
             // arrays to pass current row values into
             string[] rowOne = new string[3];
             string[] rowTwo = new string[3];
