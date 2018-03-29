@@ -4,25 +4,14 @@ using System.Text;
 
 namespace TicTacToe
 {
-    public class Person
+    public class Player
     {
-
-        public class Player
+        public Player(string name, string mark)
         {
-            public Player(string name, string mark)
-            {
-                Name = name;
-                Mark = mark;
-            }
-
-
-            //remember these are the get & set methods for creating a class
-            public string Name { get; set; }
-            public string Mark { get; set; }
-
-
+            Name = name;
+            Mark = mark;
         }
-
-
+        public string Name { get; set; }
+        public string Mark { get; set; }
     }
 }
