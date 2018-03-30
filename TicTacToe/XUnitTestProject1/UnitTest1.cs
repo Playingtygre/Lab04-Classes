@@ -19,7 +19,7 @@ namespace TicTacToeTest
         [InlineData("Tiger", "X")]
         public void CanReturnName(string name, string marker)
         {
-            Assert.Equal(CreatePlayer1 (name, marker));
+            Assert.Equal(CreatePlayer1(name, marker));
         }
 
 
