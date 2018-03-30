@@ -1,4 +1,6 @@
 ## Tic Tac Toe
+This is a console Tic Tac Toe application that allows two Player One & Player Two for user input in order to play a game of 
+tic tac toe.
 
 ## Author:
 Tiger Hsu
