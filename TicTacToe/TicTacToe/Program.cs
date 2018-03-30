@@ -40,7 +40,7 @@ namespace TicTacToe
         }
 
         // {get;set} in Board.CS
-        //
+        // 3D array
         static string[,] CreateBoard()
         {
             TheBoard board = new TheBoard();
@@ -65,7 +65,7 @@ namespace TicTacToe
 
         }
 
-      
+      // Method which takes in class of Person.CS setting alternating boards to each player.
         static void StartGame(Player player1, Player player2)
         {
             string[,] board = CreateBoard();
@@ -109,7 +109,8 @@ namespace TicTacToe
             PlayerOneTurn(board, player1, player2, counter);
         }
 
-    
+        //Method which checks to see if space is open by starting off false then returning true,
+        // if player selects 1-9;
         public static bool CheckIfSpaceOpen(string selection, string[,] board)
         {
             bool check = false;
@@ -155,7 +156,7 @@ namespace TicTacToe
 
         }
 
-    
+        //Method which takes in Player class re-runs after each player selector
         public static string[,] UpdateBoard(string selection, string[,] board, Player player)
         {
             Console.Clear();
@@ -175,19 +176,25 @@ namespace TicTacToe
             return board;
         }
 
-      
+        //MEthod for checking to see if there is a winner
         static void CheckForWinner(string[,] board, Player player, Player loser, byte counter)
         {
             for (int i = 0; i < 3; i++)
             {
-               
+                // WINNER IN RIGHT
+                //  [XXX]
+                //  [234]
+                //  [567]
                 if (board[i, 0] == board[i, 1] && board[i, 0] == board[i, 2])
                 {
                     Console.WriteLine($"{player.Name} Wins!!! Do you want to play again?");
                     string answer = Console.ReadLine().ToUpper();
                     EndOfGame(answer, player, loser);
                 }
-              
+                // WINNER IN LEFT
+                //  [X23]
+                //  [X56]
+                //  [X67]
                 if (board[0, i] == board[1, i] && board[0, i] == board[2, i])
                 {
                     Console.WriteLine($"{player.Name} Wins!!! Do you want to play again?");
@@ -197,7 +204,6 @@ namespace TicTacToe
 
             }
 
-           
             if (board[0, 0] == board[1, 1] && board[0, 0] == board[2, 2])
             {
                 Console.WriteLine($"{player.Name} Wins!!! Do you want to play again?");
@@ -211,7 +217,6 @@ namespace TicTacToe
                 string answer = Console.ReadLine().ToUpper();
                 EndOfGame(answer, player, loser);
             }
-         
             if (counter == 9)
             {
                 Console.WriteLine("It is a draw!");
@@ -221,6 +226,7 @@ namespace TicTacToe
 
         }
 
+        //Method restart of end game.
         static void EndOfGame(string answer, Player player1, Player player2)
         {
             if (answer == "Y" || answer == "YES")
