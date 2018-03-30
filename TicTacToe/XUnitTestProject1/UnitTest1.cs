@@ -20,6 +20,7 @@ namespace TicTacToeTest
         [InlineData("John")]
         [InlineData("Tony")]
         [InlineData("Josh")]
+        [InlineData("Daniel")]
         public void CanReturnName(string name)
         {
             Player player1 = new Player(name, "F");
@@ -33,6 +34,7 @@ namespace TicTacToeTest
         [InlineData("X")]
         [InlineData("O")]
         [InlineData("B")]
+        [InlineData("Y")]
         // unit test marker = x passes thru thsi method CanReturnMark
         public void CanReturnMark(string marker)
         {
