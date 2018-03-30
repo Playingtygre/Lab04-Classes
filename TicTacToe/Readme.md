@@ -1,6 +1,6 @@
 ## Tic Tac Toe
 This is a console Tic Tac Toe application that allows two Player One & Player Two for user input in order to play a game of 
-tic tac toe.
+tic tac toe. The numbers in each of the squares will indicate the position number. Prompt the user to select which position they wish to play and then replace that position with either an X or an O
 
 ## Author:
 Tiger Hsu
