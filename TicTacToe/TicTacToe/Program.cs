@@ -90,7 +90,7 @@ namespace TicTacToe
             PlayerTwoTurn(board, player1, player2, counter);
         }
 
-      
+      //array checker to see if player two wins 
         static void PlayerTwoTurn(string[,] board, Player player1, Player player2, byte counter)
         {
             Console.WriteLine($"{player2.Name} it is your turn. Please choose a location.");
