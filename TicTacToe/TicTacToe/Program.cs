@@ -24,7 +24,8 @@ namespace TicTacToe
             StartGame(player, second);
         }
 
-       //Input Players
+        //Input Players creating Class of Player in the get Set Methods
+        // {get; Set;} Players in person.cs
         public static Player CreatePlayer1(string name, string marker)
         {
             Player player1 = new Player(name, marker);
@@ -38,7 +39,8 @@ namespace TicTacToe
 
         }
 
-        /// creating 3x3 game board matrix
+        // {get;set} in Board.CS
+        //
         static string[,] CreateBoard()
         {
             TheBoard board = new TheBoard();
@@ -238,31 +240,6 @@ namespace TicTacToe
                 Environment.Exit(0);
             }
 
-        }
-
-
-
-        public static string Convert(int number)
-        {
-
-            //If the number is divisible by 3 AND 5, then run this statemetn
-            if (number % 3 == 0 && number % 5 == 0)
-            {
-
-                return "FizzBuzz";
-            }
-            if (number % 3 == 0)
-            {
-                // Amanda 3.20.18 - Added this code per Janine on 3.15
-                return "Fizz";
-            }
-            if (number % 5 == 0)
-            {
-                //TODO:
-                return "Buzz";
-            }
-
-            return number.ToString();
         }
 
     }

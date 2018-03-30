@@ -9,11 +9,7 @@ namespace TicTacToeTest
     public class UnitTest1
     {
 
-        [Fact]
-        public void CanReturn1()
-        {
-            Assert.Equal("1", Convert(1));
-        }
+       
 
         [Theory]
         [InlineData("Tiger")]
@@ -21,6 +17,7 @@ namespace TicTacToeTest
         [InlineData("Tony")]
         [InlineData("Josh")]
         [InlineData("Daniel")]
+
         public void CanReturnName(string name)
         {
             Player player1 = new Player(name, "F");
@@ -35,6 +32,7 @@ namespace TicTacToeTest
         [InlineData("O")]
         [InlineData("B")]
         [InlineData("Y")]
+        [InlineData("Z")]
         // unit test marker = x passes thru thsi method CanReturnMark
         public void CanReturnMark(string marker)
         {
