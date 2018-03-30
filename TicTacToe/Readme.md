@@ -21,7 +21,7 @@ inpt.
 
 ## Example
 
-![alt text](http://url/to/img.png)
+![alt text](/TicTacToe/TicTac.JPG)
 
 <!-- Show them what looks like and how how to use the application.  -->
 
