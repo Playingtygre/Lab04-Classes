@@ -80,8 +80,6 @@ namespace TicTacToe
             string choice = Console.ReadLine();
             string selection = "|" + choice + "|";
             bool check = CheckIfSpaceOpen(selection, board);
-            //if check is true, means the space is available
-            //if check is false, means space is occupied
             if (check == false)
             {
                 PlayerOneTurn(board, player1, player2, counter);
@@ -92,15 +90,13 @@ namespace TicTacToe
             PlayerTwoTurn(board, player1, player2, counter);
         }
 
-      
+      //array checker to see if player two wins 
         static void PlayerTwoTurn(string[,] board, Player player1, Player player2, byte counter)
         {
             Console.WriteLine($"{player2.Name} it is your turn. Please choose a location.");
             string choice = Console.ReadLine();
             string selection = "|" + choice + "|";
             bool check = CheckIfSpaceOpen(selection, board);
-            //if check is true, means the space is available
-            //if check is false, means space is occupied
             if (check == false)
             {
                 PlayerTwoTurn(board, player1, player2, counter);
@@ -116,7 +112,6 @@ namespace TicTacToe
         {
             bool check = false;
 
-            // arrays to pass current row values into
             string[] rowOne = new string[3];
             string[] rowTwo = new string[3];
             string[] rowThree = new string[3];
@@ -124,17 +119,16 @@ namespace TicTacToe
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    //puts all of the top row into rowOne
                     if (i == 0)
                     {
                         rowOne[j] = board[i, j];
                     }
-                    //puts all of the middle row into rowTwo
+                    
                     if (i == 1)
                     {
                         rowTwo[j] = board[i, j];
                     }
-                    //puts all of the bottom row into rowThree
+                   
                     if (i == 2)
                     {
                         rowThree[j] = board[i, j];
@@ -184,14 +178,14 @@ namespace TicTacToe
         {
             for (int i = 0; i < 3; i++)
             {
-                //checks for horizontal winner
+               
                 if (board[i, 0] == board[i, 1] && board[i, 0] == board[i, 2])
                 {
                     Console.WriteLine($"{player.Name} Wins!!! Do you want to play again?");
                     string answer = Console.ReadLine().ToUpper();
                     EndOfGame(answer, player, loser);
                 }
-                //checks for vertical winner
+              
                 if (board[0, i] == board[1, i] && board[0, i] == board[2, i])
                 {
                     Console.WriteLine($"{player.Name} Wins!!! Do you want to play again?");
@@ -201,7 +195,7 @@ namespace TicTacToe
 
             }
 
-            //check for diagonal winner
+           
             if (board[0, 0] == board[1, 1] && board[0, 0] == board[2, 2])
             {
                 Console.WriteLine($"{player.Name} Wins!!! Do you want to play again?");
@@ -215,7 +209,7 @@ namespace TicTacToe
                 string answer = Console.ReadLine().ToUpper();
                 EndOfGame(answer, player, loser);
             }
-            // check for a draw
+         
             if (counter == 9)
             {
                 Console.WriteLine("It is a draw!");
