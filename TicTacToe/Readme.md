@@ -29,12 +29,12 @@ inpt.
 This  Program uses C# and the .NET Core 2.0 platform
 
 ## Credits
-Aurther Allen
-Kevin Farrow
-Brent William
-Philip Werner
-Josh Taylor
-Amanda Iverson
+Aurther Allen <br>
+Kevin Farrow <br>
+Brent William <br>
+Philip Werner <br>
+Josh Taylor <br>
+Amanda Iverson <br>
 
 ## Resources
 StackoverFlow
